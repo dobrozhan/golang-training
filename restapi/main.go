@@ -12,16 +12,16 @@ import (
 
 // Book Struct (Model)
 type Book struct {
-	ID 			string `json:"id"`
-	ISBN	 	string `json:"isbn"`
+	ID 	string `json:"id"`
+	ISBN	string `json:"isbn"`
 	Title 	string `json:"title"`
 	Author	*Author `json:"author"`
 }
 
 // Author Struct
 type Author struct {
-	FirstName		string `json:"firstname"`
-	LastName		string `json:"lastname"`
+	FirstName string `json:"firstname"`
+	LastName  string `json:"lastname"`
 }
 
 // Init books var as a slice Book struct
@@ -84,7 +84,7 @@ func deleteBook(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-  // Init router
+  	// Init router
 	r := mux.NewRouter()
 
 	// Hardcoded data - @todo: add database
